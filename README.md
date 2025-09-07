@@ -98,10 +98,10 @@ This will:
                   │
     ┌─────────────┼─────────────┐
     │             │             │
-┌───▼───┐ ┌──────▼──────┐ ┌────▼────┐
+┌───▼───┐ ┌──────▼──────┐ ┌────▼───────┐
 │  VLM  │ │    Azure    │ │ Traditional│
-│Extract│ │   Extract   │ │  Extract  │
-└───┬───┘ └──────┬──────┘ └────┬────┘
+│Extract│ │   Extract   │ │  Extract   │
+└───┬───┘ └──────┬──────┘ └────┬───────┘
     │            │             │
     └─────────────▼─────────────┘
                   │
@@ -132,8 +132,8 @@ This will:
 ### Dependencies
 ```bash
 # Clone repository
-git clone <repository-url>
-cd pdf-visual-extractor
+git clone https://github.com/roylanpais/PDFContentExtraction.git
+cd PDFContentExtraction
 
 # Install Python dependencies
 pip install -r requirements.txt
@@ -416,7 +416,3 @@ For questions, issues, or contributions:
 2. **Review the examples** in `examples.py` and `solve_assignment.py`
 3. **Enable debug mode** for detailed logging and error information
 4. **Check system setup** using `python extract.py setup`
-
----
-
-**Built with ❤️ for intelligent document processing**
