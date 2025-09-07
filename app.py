@@ -14,7 +14,10 @@ import pandas as pd
 from PIL import Image
 import zipfile
 import io
+from dotenv import load_dotenv
 
+# Load environment variables
+load_dotenv()
 from pdf_extractor import (
     PDFExtractor, 
     ExtractionConfig, 
@@ -54,11 +57,11 @@ def main():
         )
         
         # VLM model selection (if VLM method selected)
-        vlm_model = "gpt-4-vision"
+        vlm_model = "gemini-vision"
         if method in ["vlm", "hybrid"]:
             vlm_model = st.selectbox(
                 "VLM Model",
-                options=["gpt-4-vision", "claude-vision", "gemini-vision", "llava", "blip2"],
+                options=["gemini-vision", "gpt-4-vision", "claude-vision", "llava", "blip2"],
                 help="Select the Vision Language Model to use"
             )
         
@@ -444,7 +447,12 @@ def show_setup_info():
     
     # Check API keys
     api_status = {}
-    
+
+    if os.getenv("GOOGLE_API_KEY"):
+        api_status["Google"] = "✅ Configured"
+    else:
+        api_status["Google"] = "⚠️ Not configured"
+
     if os.getenv("OPENAI_API_KEY"):
         api_status["OpenAI"] = "✅ Configured"
     else:
