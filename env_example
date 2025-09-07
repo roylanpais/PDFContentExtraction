@@ -1,0 +1,37 @@
+# Azure AI Document Intelligence
+AZURE_DOC_INTELLIGENCE_ENDPOINT=your_endpoint_here
+AZURE_DOC_INTELLIGENCE_KEY=your_key_here
+
+# OpenAI
+OPENAI_API_KEY=your_openai_key_here
+
+# Anthropic
+ANTHROPIC_API_KEY=your_anthropic_key_here
+
+# Google AI
+GOOGLE_API_KEY=your_google_key_here
+
+# Hugging Face (for open-source models)
+HUGGINGFACE_TOKEN=your_hf_token_here
+
+# General Configuration
+LOG_LEVEL=INFO
+GPU_ENABLED=true
+MAX_WORKERS=4
+CACHE_ENABLED=true
+CACHE_DIR=./cache
+
+# VLM Configuration
+DEFAULT_VLM_MODEL=gpt-4-vision
+VLM_TEMPERATURE=0.1
+VLM_MAX_TOKENS=1000
+
+# Azure Configuration
+AZURE_REGION=eastus
+AZURE_RESOURCE_GROUP=your_resource_group
+
+# Output Configuration
+DEFAULT_OUTPUT_DIR=./output
+DEFAULT_OUTPUT_FORMAT=png
+INCLUDE_METADATA=true
+SAVE_INTERMEDIATE_RESULTS=false
