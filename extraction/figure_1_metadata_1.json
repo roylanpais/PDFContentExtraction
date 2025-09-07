@@ -1,0 +1,8 @@
+{
+  "figure_number": "1",
+  "page": 1,
+  "description": "The accuracy of video-based MLLMs heavily relies on keyframes",
+  "caption": "The above example shows a long video from VideoMME where keyframes are marked with green stars.",
+  "content_type": "Comparison diagram showing uniform sampling vs adaptive keyframe sampling",
+  "extracted": true
+}

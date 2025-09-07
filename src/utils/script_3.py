@@ -1,4 +1,5 @@
-
+# Create a comprehensive README.md file
+readme_content = """
 # PDF Content Extraction Pipeline
 
 A robust pipeline for automatically extracting figures, algorithms, and metadata from scientific PDF documents.
@@ -28,6 +29,11 @@ This project implements an intelligent PDF content extraction system that can:
 
 ## 📋 Requirements
 
+### System Requirements
+- Python 3.8+
+- 2GB+ RAM (for processing large PDFs)
+- 500MB+ disk space
+
 ### Dependencies
 ```bash
 pip install -r requirements.txt
@@ -43,14 +49,14 @@ Key libraries:
 
 1. **Clone the repository**:
 ```bash
-git clone https://github.com/roylanpais/PDFContentExtraction.git
-cd PDFContentExtraction
+git clone <repository-url>
+cd pdf-content-extractor
 ```
 
 2. **Create virtual environment** (recommended):
 ```bash
 python -m venv venv
-source venv/bin/activate  # On Windows: venv\Scripts\activate
+source venv/bin/activate  # On Windows: venv\\Scripts\\activate
 ```
 
 3. **Install dependencies**:
@@ -151,9 +157,9 @@ extracted_content/
 ```python
 # Customize figure detection patterns
 figure_patterns = [
-    r"Figure\s+(\d+)",
-    r"Fig\.\s*(\d+)", 
-    r"FIGURE\s+(\d+)"
+    r"Figure\\s+(\\d+)",
+    r"Fig\\.\\s*(\\d+)", 
+    r"FIGURE\\s+(\\d+)"
 ]
 
 # Algorithm detection keywords
@@ -231,6 +237,24 @@ logging.basicConfig(level=logging.DEBUG)
 - **Reference Resolution**: Link figures to their references in text
 - **Quality Assessment**: Automatic quality scoring for extracted content
 
+## 🤝 Contributing
+
+We welcome contributions! Please:
+1. Fork the repository
+2. Create a feature branch
+3. Add tests for new functionality
+4. Submit a pull request
+
+### Development Setup
+```bash
+pip install -e .[dev]
+pre-commit install
+```
+
+## 📄 License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
+
 ## 🙏 Acknowledgments
 
 - PyMuPDF team for excellent PDF processing capabilities
@@ -247,3 +271,9 @@ For issues and questions:
 ---
 
 **Note**: This pipeline is designed for scientific documents with standard formatting. Performance may vary with non-standard layouts or heavily customized document formats.
+"""
+
+with open("README.md", "w") as f:
+    f.write(readme_content)
+
+print("Created comprehensive README.md file")

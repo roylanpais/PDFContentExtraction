@@ -1,0 +1,27 @@
+{
+  "pdf_analyzed": "Assignment-PDF.pdf",
+  "extraction_method": "Pattern-based text analysis with computer vision",
+  "target_extractions": {
+    "figure_1": {
+      "target": "Figure 1 - keyframe sampling comparison",
+      "location": "Page 1",
+      "status": "Successfully identified and analyzed"
+    },
+    "ada_algorithm": {
+      "target": "ADA Algorithm pseudocode",
+      "location": "Page 11",
+      "status": "Successfully extracted and structured"
+    }
+  },
+  "methodology": {
+    "figure_detection": "Regex pattern matching for 'Figure N' references",
+    "algorithm_extraction": "Keyword-based identification of algorithm blocks",
+    "content_analysis": "Spatial text analysis and structure recognition"
+  },
+  "tools_used": [
+    "PyMuPDF for PDF parsing",
+    "OpenCV for image processing",
+    "Regular expressions for pattern matching",
+    "JSON for structured output"
+  ]
+}

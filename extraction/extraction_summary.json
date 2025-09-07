@@ -1,0 +1,11 @@
+{
+  "extraction_success": true,
+  "figure_1_extracted": true,
+  "ada_algorithm_extracted": true,
+  "output_directory": "extracted_content",
+  "files_created": [
+    "extracted_content/figures/figure_1_metadata.json",
+    "extracted_content/algorithms/ada_algorithm_details.json",
+    "extracted_content/metadata/extraction_metadata.json"
+  ]
+}
