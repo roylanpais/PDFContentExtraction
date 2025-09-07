@@ -1,0 +1,19 @@
+{
+  "table_number": "1",
+  "title": "Video-based question answering accuracy (%)",
+  "description": "Comparison of different approaches on LongVideoBench and VideoMME",
+  "columns": [
+    "Method",
+    "Frames",
+    "LLM",
+    "LVB val",
+    "V-MME"
+  ],
+  "key_findings": [
+    "AKS improves all baseline models",
+    "LLaVA-Video w/ AKS achieves 62.7% on LVB",
+    "Consistent improvements across all tested models"
+  ],
+  "extracted": true,
+  "file_path": "interactive_output/tables/table_1.json"
+}

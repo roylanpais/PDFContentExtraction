@@ -1,0 +1,10 @@
+{
+  "figure_number": "2",
+  "page": 3,
+  "title": "Overall framework",
+  "description": "Complete AKS framework with judge & split optimization",
+  "caption": "Overall framework showing AKS integration into MLLM pipeline",
+  "content_description": "Diagram of the adaptive keyframe sampling process",
+  "extracted": true,
+  "file_path": "interactive_output/figures/figure_2.png"
+}

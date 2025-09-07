@@ -1,0 +1,39 @@
+{
+  "algorithm_name": "ADA: Adaptive Keyframe Selection",
+  "algorithm_number": "1",
+  "page": 11,
+  "inputs": [
+    "matching_scores: A list of frame-question matching scores",
+    "level: Current recursion level",
+    "max_level: Maximum recursion level",
+    "sthr: Threshold parameter",
+    "M: Number of frames to select"
+  ],
+  "outputs": [
+    "selected_frames: Indices of the selected M frames"
+  ],
+  "functions": [
+    "SplitSegments(matching_scores, level, max_level, sthr, M)",
+    "SelectFrames(segments, M)"
+  ],
+  "algorithm_steps": [
+    "1. Initialize split_scores and new_scores lists",
+    "2. For each matching_score in matching_scores:",
+    "   - Calculate sall (mean of all scores)",
+    "   - Calculate stop (mean of top M scores)",
+    "   - Calculate m = stop - sall",
+    "   - If m >= sthr: append to split_scores",
+    "   - Else if level < max_level: split into two bins",
+    "3. Recursively process new_scores if not empty",
+    "4. Select frames based on segment lengths and scores"
+  ],
+  "key_concepts": [
+    "Recursive binary splitting of video timeline",
+    "Adaptive threshold-based decision making",
+    "Balance between relevance and temporal coverage",
+    "Hierarchical optimization approach"
+  ],
+  "complexity": "O(T log M) where T is video length, M is keyframes",
+  "extracted": true,
+  "file_path": "interactive_output/algorithms/ada_algorithm_complete.json"
+}

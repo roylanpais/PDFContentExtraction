@@ -1,0 +1,10 @@
+{
+  "figure_number": "1",
+  "page": 1,
+  "title": "Keyframe sampling comparison",
+  "description": "Comparison of uniform sampling vs adaptive keyframe sampling",
+  "caption": "The accuracy of video-based MLLMs heavily relies on the quality of keyframes",
+  "content_description": "Shows a panda video example with different sampling strategies",
+  "extracted": true,
+  "file_path": "interactive_output/figures/figure_1.png"
+}

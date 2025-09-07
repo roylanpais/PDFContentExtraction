@@ -1,0 +1,163 @@
+{
+  "extraction_success": true,
+  "pdf_analyzed": "Assignment-PDF.pdf",
+  "total_items_extracted": 6,
+  "detailed_results": {
+    "figures": [
+      {
+        "figure_number": "1",
+        "page": 1,
+        "title": "Keyframe sampling comparison",
+        "description": "Comparison of uniform sampling vs adaptive keyframe sampling",
+        "caption": "The accuracy of video-based MLLMs heavily relies on the quality of keyframes",
+        "content_description": "Shows a panda video example with different sampling strategies",
+        "extracted": true,
+        "file_path": "interactive_output/figures/figure_1.png"
+      },
+      {
+        "figure_number": "2",
+        "page": 3,
+        "title": "Overall framework",
+        "description": "Complete AKS framework with judge & split optimization",
+        "caption": "Overall framework showing AKS integration into MLLM pipeline",
+        "content_description": "Diagram of the adaptive keyframe sampling process",
+        "extracted": true,
+        "file_path": "interactive_output/figures/figure_2.png"
+      },
+      {
+        "figure_number": "3",
+        "page": 4,
+        "title": "Adaptive sampling example",
+        "description": "Hierarchical splitting example with 8 keyframes selection",
+        "caption": "Example of adaptive sampling (ADA) with recursive binary splitting",
+        "content_description": "Shows multi-level frame selection process",
+        "extracted": true,
+        "file_path": "interactive_output/figures/figure_3.png"
+      }
+    ],
+    "algorithms": [
+      {
+        "algorithm_name": "ADA: Adaptive Keyframe Selection",
+        "algorithm_number": "1",
+        "page": 11,
+        "inputs": [
+          "matching_scores: A list of frame-question matching scores",
+          "level: Current recursion level",
+          "max_level: Maximum recursion level",
+          "sthr: Threshold parameter",
+          "M: Number of frames to select"
+        ],
+        "outputs": [
+          "selected_frames: Indices of the selected M frames"
+        ],
+        "functions": [
+          "SplitSegments(matching_scores, level, max_level, sthr, M)",
+          "SelectFrames(segments, M)"
+        ],
+        "algorithm_steps": [
+          "1. Initialize split_scores and new_scores lists",
+          "2. For each matching_score in matching_scores:",
+          "   - Calculate sall (mean of all scores)",
+          "   - Calculate stop (mean of top M scores)",
+          "   - Calculate m = stop - sall",
+          "   - If m >= sthr: append to split_scores",
+          "   - Else if level < max_level: split into two bins",
+          "3. Recursively process new_scores if not empty",
+          "4. Select frames based on segment lengths and scores"
+        ],
+        "key_concepts": [
+          "Recursive binary splitting of video timeline",
+          "Adaptive threshold-based decision making",
+          "Balance between relevance and temporal coverage",
+          "Hierarchical optimization approach"
+        ],
+        "complexity": "O(T log M) where T is video length, M is keyframes",
+        "extracted": true,
+        "file_path": "interactive_output/algorithms/ada_algorithm_complete.json"
+      }
+    ],
+    "tables": [
+      {
+        "table_number": "1",
+        "title": "Video-based question answering accuracy (%)",
+        "description": "Comparison of different approaches on LongVideoBench and VideoMME",
+        "columns": [
+          "Method",
+          "Frames",
+          "LLM",
+          "LVB val",
+          "V-MME"
+        ],
+        "key_findings": [
+          "AKS improves all baseline models",
+          "LLaVA-Video w/ AKS achieves 62.7% on LVB",
+          "Consistent improvements across all tested models"
+        ],
+        "extracted": true,
+        "file_path": "interactive_output/tables/table_1.json"
+      },
+      {
+        "table_number": "2",
+        "title": "Different sampling strategies accuracy",
+        "description": "Comparison of UNI, TOP, BIN, and ADA sampling strategies",
+        "columns": [
+          "Sampling",
+          "LongVideoBench val",
+          "VideoMME"
+        ],
+        "key_findings": [
+          "ADA sampling achieves best overall performance",
+          "TOP sampling excels on LongVideoBench",
+          "BIN sampling performs well on VideoMME"
+        ],
+        "extracted": true,
+        "file_path": "interactive_output/tables/table_2.json"
+      }
+    ],
+    "equations": [],
+    "custom": [],
+    "metadata": {
+      "pdf_path": "Assignment-PDF.pdf",
+      "extraction_timestamp": "2025-09-06T21:30:00+05:30",
+      "user_selections": {
+        "figures": [
+          "Figure 1 - Keyframe sampling comparison (Page 1)",
+          "Figure 2 - Overall framework (Page 3)",
+          "Figure 3 - Adaptive sampling example (Page 4)"
+        ],
+        "algorithms": [
+          "Algorithm 1 - ADA: Adaptive Keyframe Selection (Page 11)"
+        ],
+        "tables": [
+          "Table 1 - Video-based QA accuracy (Page 5)",
+          "Table 2 - Different sampling strategies (Page 6)"
+        ],
+        "equations": [],
+        "custom": []
+      },
+      "extraction_summary": {
+        "figures_extracted": 3,
+        "algorithms_extracted": 1,
+        "tables_extracted": 2,
+        "equations_extracted": 0,
+        "custom_extractions": 0,
+        "total_items": 6
+      },
+      "extraction_methods": {
+        "figures": "Pattern matching + spatial analysis",
+        "algorithms": "Keyword detection + structure parsing",
+        "tables": "Layout analysis + content extraction",
+        "equations": "LaTeX pattern recognition",
+        "custom": "User-defined pattern matching"
+      },
+      "output_structure": {
+        "figures": "interactive_output/figures",
+        "algorithms": "interactive_output/algorithms",
+        "tables": "interactive_output/tables",
+        "equations": "interactive_output/equations",
+        "metadata": "interactive_output/metadata"
+      }
+    }
+  },
+  "output_directory": "interactive_output"
+}

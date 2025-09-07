@@ -1,0 +1,17 @@
+{
+  "table_number": "2",
+  "title": "Different sampling strategies accuracy",
+  "description": "Comparison of UNI, TOP, BIN, and ADA sampling strategies",
+  "columns": [
+    "Sampling",
+    "LongVideoBench val",
+    "VideoMME"
+  ],
+  "key_findings": [
+    "ADA sampling achieves best overall performance",
+    "TOP sampling excels on LongVideoBench",
+    "BIN sampling performs well on VideoMME"
+  ],
+  "extracted": true,
+  "file_path": "interactive_output/tables/table_2.json"
+}

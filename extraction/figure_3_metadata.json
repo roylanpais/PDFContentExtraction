@@ -1,0 +1,10 @@
+{
+  "figure_number": "3",
+  "page": 4,
+  "title": "Adaptive sampling example",
+  "description": "Hierarchical splitting example with 8 keyframes selection",
+  "caption": "Example of adaptive sampling (ADA) with recursive binary splitting",
+  "content_description": "Shows multi-level frame selection process",
+  "extracted": true,
+  "file_path": "interactive_output/figures/figure_3.png"
+}
