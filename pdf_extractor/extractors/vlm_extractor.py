@@ -12,7 +12,7 @@ from PIL import Image
 import requests
 import os
 
-from .base import BaseExtractor
+from ..base import BaseExtractor
 from ..models import ExtractionResult
 
 logger = logging.getLogger(__name__)

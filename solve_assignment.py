@@ -81,7 +81,7 @@ def extract_ada_algorithm(pdf_path: Path, output_dir: Path):
         target_type=TargetType.ALGORITHM,
         target_identifier="ADA",  # Look for ADA algorithm
         extraction_method=ExtractionMethod.VLM,  # VLM best for algorithm detection
-        vlm_model="gpt-4-vision",
+        vlm_model="gemini-vision",
         pages=[11],  # Specifically page 11
         output_dir=str(output_dir / "ada_algorithm"),
         confidence_threshold=0.5,

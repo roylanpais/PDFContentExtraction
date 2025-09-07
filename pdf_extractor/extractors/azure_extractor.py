@@ -8,7 +8,7 @@ from pathlib import Path
 from typing import List, Dict, Any, Optional
 from PIL import Image
 
-from .base import BaseExtractor
+from ..base import BaseExtractor
 from ..models import ExtractionResult
 
 logger = logging.getLogger(__name__)

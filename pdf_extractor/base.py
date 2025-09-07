@@ -312,12 +312,6 @@ class LayoutAnalyzer:
             
             gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
             
-            # Use template matching for common equation patterns
-            # This is a simplified approach - in practice, you'd use ML models
-            
-            # Look for patterns that might indicate equations
-            # (This is a placeholder - real implementation would be more sophisticated)
-            
             contours, _ = cv2.findContours(gray, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
             
             for i, contour in enumerate(contours):
